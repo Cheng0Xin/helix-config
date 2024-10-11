@@ -1,0 +1,101 @@
+# ========================
+# Lean
+# ========================
+[[language]]
+name = "lean"
+formatter = { command = "sed", args = ["s/[ \t]*$//"] }
+
+# ========================
+# Toml
+# ========================
+[[language]]
+name = "toml"
+auto-format = true
+formatter = { command = "sed", args = ["s/[ \t]*$//"] }
+
+# ========================
+# Ocaml
+# ========================
+[[language]]
+name = "ocaml"
+formatter = { command = "ocamlformat", args = [
+  "-",
+  "--impl",
+  "--enable-outside-detected-project", # Enable only if you want to format files outside of projects
+  ] }
+
+# ========================
+# Rust
+# ========================
+[[language]]
+name = "rust"
+auto-format = true
+
+# ========================
+# Typst
+# ========================
+[language-server.typst-lsp]
+command = "typst-lsp"
+config = { exportPdf = "never" }
+
+[[language]]
+name = "typst"
+scope = "source.typst"
+file-types = ["typst", "typ"]
+indent = { tab-width = 2, unit = "  " }
+comment-token = "//"
+injection-regex = "typ(st)?"
+roots = ["typst.toml"]
+language-servers = [ "typst-lsp" ]
+
+[language.auto-pairs]
+'(' = ')'
+'{' = '}'
+'[' = ']'
+'"' = '"'
+'`' = '`'
+'<' = '>'
+'$' = '$'
+
+[[grammar]]
+name = "typst"
+source.git = "https://github.com/uben0/tree-sitter-typst"
+source.rev = "master"
+
+# ========================
+# Latex
+# ========================
+[[language]]
+name = "latex"
+[language.auto-pairs]
+'(' = ')'
+'{' = '}'
+'[' = ']'
+'"' = '"'
+'`' = '`'
+'<' = '>'
+'$' = '$'
+
+# ========================
+# Web development
+# ========================
+[[language]]
+name = "tsx"
+language-servers = ["typescript-language-server", "tailwindcss-ls"]
+
+[[language]]
+name = "jsx"
+language-servers = ["typescript-language-server", "tailwindcss-ls"]
+
+[[language]]
+name = "html"
+language-servers = ["vscode-html-language-server", "tailwindcss-ls" ]
+
+[[language]]
+name = "css"
+language-servers = ["vscode-css-language-server", "tailwindcss-ls" ]
+
+[language-server.tailwindcss-ls]
+command = "tailwindcss-language-server"
+args = ["--stdio"]
+config = { userLanguages = { astro = "html", "*.astro" = "html" } }

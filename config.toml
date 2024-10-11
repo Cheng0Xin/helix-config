@@ -1,0 +1,154 @@
+# --------------------------------------------
+#                   Appearance
+# --------------------------------------------
+theme = "iroaseta"
+
+[editor]
+line-number = 'relative'
+cursorline = true
+bufferline = 'multiple'
+color-modes = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.whitespace.render]
+space = "none"
+tab = "all"
+nbsp = "none"
+nnbsp = "none"
+newline = "all"
+
+[editor.whitespace.characters]
+space = "·"
+nbsp = "⍽"
+tab = "→"
+newline = "⏎"
+tabpad = "·"
+
+[editor.gutters]
+layout = ["diff", "diagnostics", "line-numbers", "spacer"]
+
+[editor.gutters.line-numbers]
+min-width = 1
+
+[editor.soft-wrap]
+enable = true
+max-wrap = 10 # increase value to reduce forced mid-word wrapping
+max-indent-retain = 40
+
+[editor.smart-tab]
+enable = false
+
+[editor.indent-guides]
+render = true
+character = "╎"
+skip-levels = 0
+
+[editor.statusline]
+left = [
+  "mode",
+  "spacer",
+  "version-control",
+  "spacer",
+  "separator",
+  "file-name",
+  "file-modification-indicator"
+]
+right = [
+  "spinner",
+  "spacer",
+  "workspace-diagnostics",
+  "separator",
+  "spacer",
+  "diagnostics",
+  "position",
+  "file-encoding",
+  "file-line-ending",
+  "file-type"
+]
+separator = "╎"
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+
+[editor.lsp]
+display-messages = true
+display-inlay-hints = false
+
+# --------------------------------------------
+#             Keymaps: insert
+# --------------------------------------------
+[keys.insert.C-x]
+C-o = "completion"
+
+[keys.insert.j]
+k = "normal_mode"
+j = "normal_mode"
+
+# --------------------------------------------
+#             Keymaps: normal
+# --------------------------------------------
+[keys.normal]
+# Disable some keys
+C-c = "no_op"
+# Home and end
+C-h = "goto_line_start"
+C-l = "goto_line_end"
+# Buffer navigate
+S-l = "goto_next_buffer"
+S-h = "goto_previous_buffer"
+G = "goto_last_line"
+D = ["ensure_selections_forward", "extend_to_line_end", "delete_selection"]
+C = ["ensure_selections_forward", "extend_to_line_end", "delete_selection", "insert_mode"]
+C-v = "copy_selection_on_next_line"
+A-v = "copy_selection_on_prev_line"
+# Select above
+X = "extend_line_above"
+
+[keys.normal.space]
+# Disable some keys
+F = "no_op"
+# Running code
+x = ":run-shell-command make"
+# File management
+o = "file_picker"
+O = "file_picker_in_current_directory"
+a = "symbol_picker"
+l = ":lsp-workspace-command typst-lsp.doPinMain"
+f = ":format"
+
+[keys.normal.C-x]
+C-s =  [
+  # "save_selection",
+  # "select_all",
+  # Delete trailing whitespace from end of each line
+  # ":pipe sed 's/[ \t]*$//'",
+  # Delete trailing blank lines (including whitespace) from end of the buffer
+  # ":pipe awk '/^\\s*$/ {b=b $0 \"\\n\"; next;} {printf \"%s\",b; b=\"\"; print;}'",
+  # "collapse_selection",
+  # "jump_backward",
+  # "commit_undo_checkpoint",
+  ":write",
+]
+C-c = ":quit"
+
+# [keys.normal.s]
+# s = ":w"
+
+[keys.normal.C-w]
+c = ":bc"
+
+# --------------------------------------------
+#             Keymaps: select
+# --------------------------------------------
+[keys.select]
+# Disable some keys
+f = "no_op"
+F = "no_op"
+C-c = "no_op"
+# Line manipulate
+C-h = "goto_line_start"
+C-l = "goto_line_end"
