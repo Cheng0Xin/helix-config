@@ -1,7 +1,7 @@
 # --------------------------------------------
 #                   Appearance
 # --------------------------------------------
-theme = "iroaseta"
+theme = "papercolor-light"
 
 [editor]
 line-number = 'relative'
@@ -116,23 +116,11 @@ x = ":run-shell-command make"
 # File management
 o = "file_picker"
 O = "file_picker_in_current_directory"
-a = "symbol_picker"
 l = ":lsp-workspace-command typst-lsp.doPinMain"
 f = ":format"
 
 [keys.normal.C-x]
-C-s =  [
-  # "save_selection",
-  # "select_all",
-  # Delete trailing whitespace from end of each line
-  # ":pipe sed 's/[ \t]*$//'",
-  # Delete trailing blank lines (including whitespace) from end of the buffer
-  # ":pipe awk '/^\\s*$/ {b=b $0 \"\\n\"; next;} {printf \"%s\",b; b=\"\"; print;}'",
-  # "collapse_selection",
-  # "jump_backward",
-  # "commit_undo_checkpoint",
-  ":write",
-]
+C-s = ":write"
 C-c = ":quit"
 
 # [keys.normal.s]
