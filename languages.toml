@@ -89,6 +89,7 @@ language-servers = ["typescript-language-server", "tailwindcss-ls"]
 
 [[language]]
 name = "html"
+auto-format = false
 language-servers = ["vscode-html-language-server", "tailwindcss-ls" ]
 
 [[language]]
@@ -99,3 +100,11 @@ language-servers = ["vscode-css-language-server", "tailwindcss-ls" ]
 command = "tailwindcss-language-server"
 args = ["--stdio"]
 config = { userLanguages = { astro = "html", "*.astro" = "html" } }
+
+
+# ========================
+# C-Sharp
+# ========================
+[[language]]
+name = "c-sharp"
+file-types = ["cs", "razor"]
