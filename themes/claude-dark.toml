@@ -1,3 +1,4 @@
-inherits = "merionette"
+# inherits = "merionette"
+inherits = "heisenberg"
 
-"ui.selection.primary" = { bg = "#B308E1" }
+"ui.selection.primary" = { bg = "#A83250", fg = "#000000" }
