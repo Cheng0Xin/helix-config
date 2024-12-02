@@ -2,3 +2,5 @@
 inherits = "heisenberg"
 
 "ui.selection.primary" = { bg = "#A83250", fg = "#000000" }
+"ui.selection" = { bg = "#F595AA", fg = "#000000" }
+"comment" = { fg = "teddy_bear_pink", modifiers = ["italic"] }
