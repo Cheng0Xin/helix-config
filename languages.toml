@@ -34,8 +34,8 @@ auto-format = true
 # ========================
 # Typst
 # ========================
-[language-server.typst-lsp]
-command = "typst-lsp"
+[language-server.tinymist]
+command = "tinymist"
 config = { exportPdf = "never" }
 
 [[language]]
@@ -46,7 +46,8 @@ indent = { tab-width = 2, unit = "  " }
 comment-token = "//"
 injection-regex = "typ(st)?"
 roots = ["typst.toml"]
-language-servers = [ "typst-lsp" ]
+language-servers = [ "tinymist" ]
+formatter = { command = "sed", args = ["s/[ \t]*$//"] }
 
 [language.auto-pairs]
 '(' = ')'
