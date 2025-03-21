@@ -4,6 +4,7 @@
 [[language]]
 name = "lean"
 formatter = { command = "sed", args = ["s/[ \t]*$//"] }
+indent = { tab-width = 2, unit = "  " }
 
 # ========================
 # Toml
@@ -12,6 +13,7 @@ formatter = { command = "sed", args = ["s/[ \t]*$//"] }
 name = "toml"
 auto-format = true
 formatter = { command = "sed", args = ["s/[ \t]*$//"] }
+indent = { tab-width = 2, unit = "  " }
 
 # ========================
 # Ocaml
@@ -68,6 +70,8 @@ source.rev = "master"
 # ========================
 [[language]]
 name = "latex"
+auto-format = true
+formatter = { command = "tex-fmt", args = ["--stdin"] }
 [language.auto-pairs]
 '(' = ')'
 '{' = '}'
