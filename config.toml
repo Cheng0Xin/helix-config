@@ -107,6 +107,7 @@ C-v = "copy_selection_on_next_line"
 A-v = "copy_selection_on_prev_line"
 # Select above
 X = "extend_line_above"
+ret = "@gw"
 
 [keys.normal.space]
 # Disable some keys
