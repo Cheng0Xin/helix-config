@@ -14,6 +14,18 @@ auto-format = true
 formatter = { command = "sed", args = ["s/[ \t]*$//"] }
 
 # ========================
+# Plant UML
+# ========================
+[[language]]
+name = "plantuml"
+scope = "source.plantuml"
+auto-format = true
+comment-tokens = "'"
+indent = { tab-width = 4, unit = "    " }
+file-types = ["plantuml", "puml"]
+formatter = { command = "sed", args = ["s/[ \t]*$//"] }
+
+# ========================
 # Ocaml
 # ========================
 [[language]]
