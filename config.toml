@@ -1,7 +1,7 @@
 # --------------------------------------------
 #                   Appearance
 # --------------------------------------------
-theme = "claude-dark"
+theme = "claude-light"
 
 [editor]
 line-number = 'relative'
@@ -108,6 +108,8 @@ A-v = "copy_selection_on_prev_line"
 # Select above
 X = "extend_line_above"
 ret = "@gw"
+# yazi integration
+C-y = ":sh wezterm cli split-pane --left --percent 50 -- ~/.config/helix/yazi-picker.sh e > /dev/null 2>&1"
 
 [keys.normal.space]
 # Disable some keys
