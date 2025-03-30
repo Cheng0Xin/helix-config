@@ -108,8 +108,12 @@ A-v = "copy_selection_on_prev_line"
 # Select above
 X = "extend_line_above"
 ret = "@gw"
+
 # yazi integration
-C-y = ":sh wezterm cli split-pane --left --percent 50 -- ~/.config/helix/yazi-picker.sh e > /dev/null 2>&1"
+[keys.normal.C-y]
+o = ":sh wezterm cli split-pane --left --percent 50 -- ~/.config/helix/yazi-picker.sh e > /dev/null 2>&1"
+s = ":sh wezterm cli split-pane --left --percent 50 -- ~/.config/helix/yazi-picker.sh hs > /dev/null 2>&1"
+v = ":sh wezterm cli split-pane --left --percent 50 -- ~/.config/helix/yazi-picker.sh vs > /dev/null 2>&1"
 
 [keys.normal.space]
 # Disable some keys
