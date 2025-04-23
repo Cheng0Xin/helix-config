@@ -6,6 +6,15 @@ name = "lean"
 formatter = { command = "sed", args = ["s/[ \t]*$//"] }
 indent = { tab-width = 2, unit = "  " }
 
+
+# ========================
+# Lean
+# ========================
+[[language]]
+name = "elisp"
+formatter = { command = "sed", args = ["s/[ \t]*$//"] }
+indent = { tab-width = 2, unit = "  " }
+
 # ========================
 # Toml
 # ========================
@@ -43,6 +52,13 @@ formatter = { command = "ocamlformat", args = [
 # ========================
 [[language]]
 name = "rust"
+auto-format = true
+
+# ========================
+# Racket
+# ========================
+[[language]]
+name = "racket"
 auto-format = true
 
 # ========================
