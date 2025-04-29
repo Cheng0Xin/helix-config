@@ -97,6 +97,14 @@ source.rev = "master"
 # Latex
 # ========================
 [[language]]
+name = "haskell"
+auto-format = true
+formatter = { command = "ormolu", args = ["--stdin-input-file", ""] }
+
+# ========================
+# Latex
+# ========================
+[[language]]
 name = "latex"
 auto-format = true
 formatter = { command = "tex-fmt", args = ["--stdin"] }
