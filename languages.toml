@@ -1,3 +1,7 @@
+[language-server.cspell]
+command = "cspell-lsp"
+args = ["--stdio", "--config", "<path to cspell.json>"]
+
 # ========================
 # Lean
 # ========================
@@ -5,6 +9,7 @@
 name = "lean"
 formatter = { command = "sed", args = ["s/[ \t]*$//"] }
 indent = { tab-width = 2, unit = "  " }
+language-servers = ["cspell"]
 
 
 # ========================
@@ -14,6 +19,7 @@ indent = { tab-width = 2, unit = "  " }
 name = "elisp"
 formatter = { command = "sed", args = ["s/[ \t]*$//"] }
 indent = { tab-width = 2, unit = "  " }
+language-servers = ["cspell"]
 
 # ========================
 # Toml
@@ -23,6 +29,7 @@ name = "toml"
 auto-format = true
 formatter = { command = "sed", args = ["s/[ \t]*$//"] }
 indent = { tab-width = 2, unit = "  " }
+language-servers = ["cspell"]
 
 # ========================
 # Plant UML
@@ -35,6 +42,7 @@ comment-tokens = "'"
 indent = { tab-width = 4, unit = "    " }
 file-types = ["plantuml", "puml"]
 formatter = { command = "sed", args = ["s/[ \t]*$//"] }
+language-servers = ["cspell"]
 
 # ========================
 # Ocaml
@@ -46,6 +54,7 @@ formatter = { command = "ocamlformat", args = [
   "--impl",
   "--enable-outside-detected-project", # Enable only if you want to format files outside of projects
   ] }
+language-servers = ["ocamllsp", "cspell"]
 
 # ========================
 # Rust
@@ -53,6 +62,7 @@ formatter = { command = "ocamlformat", args = [
 [[language]]
 name = "rust"
 auto-format = true
+language-servers = ["rust-analyzer", "cspell"]
 
 # ========================
 # Racket
@@ -76,7 +86,7 @@ indent = { tab-width = 2, unit = "  " }
 comment-token = "//"
 injection-regex = "typ(st)?"
 roots = ["typst.toml"]
-language-servers = [ "tinymist" ]
+language-servers = [ "tinymist", "cspell" ]
 formatter = { command = "sed", args = ["s/[ \t]*$//"] }
 
 [language.auto-pairs]
@@ -108,6 +118,7 @@ formatter = { command = "ormolu", args = ["--stdin-input-file", ""] }
 name = "latex"
 auto-format = true
 formatter = { command = "tex-fmt", args = ["--stdin"] }
+language-servers = [ "texlab", "cspell" ]
 [language.auto-pairs]
 '(' = ')'
 '{' = '}'
