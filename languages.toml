@@ -13,13 +13,22 @@ language-servers = ["cspell"]
 
 
 # ========================
-# Lean
+# Elisp
 # ========================
 [[language]]
 name = "elisp"
 formatter = { command = "sed", args = ["s/[ \t]*$//"] }
 indent = { tab-width = 2, unit = "  " }
 language-servers = ["cspell"]
+
+# ========================
+# Scala
+# ========================
+[[language]]
+name = "scala"
+formatter = { command = "scalafmt", args = ["--stdin", "--stdout"] }
+indent = { tab-width = 2, unit = "  " }
+language-servers = ["metals", "cspell"]
 
 # ========================
 # Toml
