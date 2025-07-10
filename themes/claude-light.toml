@@ -1,7 +1,7 @@
 # inherits = "bogster_light"
-inherits = "spacebones_light"
+inherits = "papercolor-light"
 
-"ui.selection.primary" = { bg = "#A83250", fg = "#000000" }
-"ui.selection" = { bg = "#808080", fg = "#000000" }
-"ui.cursor.primary" = { bg = "#3F491B", fg = "#FFFFFF" }
-"ui.bufferline.active" = { bg = "#3F491B", fg = "#FFFFFF" }
+# "ui.selection.primary" = { bg = "#A83250", fg = "#000000" }
+# "ui.selection" = { bg = "#808080", fg = "#000000" }
+# "ui.cursor.primary" = { bg = "#3F491B", fg = "#FFFFFF" }
+# "ui.bufferline.active" = { bg = "#3F491B", fg = "#FFFFFF" }

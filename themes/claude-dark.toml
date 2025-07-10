@@ -5,5 +5,6 @@ inherits = "heisenberg"
 
 "ui.selection.primary" = { bg = "#A83250", fg = "#000000" }
 "ui.selection" = { bg = "#808080", fg = "#000000" }
+"comment" = { fg = "teddy_bear_pink", modifiers = ["dim", "italic"] }
 # "ui.picker.header.column.active" = { bg = "#F595AA", fg = "#000000" }
 
